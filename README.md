@@ -19,6 +19,7 @@ JGD-CobaltBlue is based on the design for [JGD-Black](http://www.jasong-designs.
 5. `ls` to check that the theme folder is present
 ### To Install on Arch Linux:
 AUR version coming soon...
+
 Once installed, you can use a theme switching application such as **LXAppearance** or **Gnome Tweak Tool** to change the theme to JGD-Black
 ## How to install the Clearlooks theme engine
 JGD-CobaltBlue, like JGD-Black, requires the Clearlooks GTK2 theme engine. To install:
