@@ -445,13 +445,13 @@ toolbar button:checked {
 /* Path bar inside CSD window, noted by class .pathbar */
 headerbar .pathbar,
 headerbar .pathbar button label {
-	color: @medium_gray;
+	color: @medium_blue;
 }
 
 headerbar .pathbar:backdrop,
 headerbar .pathbar:backdrop button label,
 headerbar .pathbar:backdrop button.active label {
-	color: @medium_gray;
+	color: @medium_blue;
 }
 
 headerbar .pathbar button {
@@ -459,7 +459,7 @@ headerbar .pathbar button {
 }
 
 headerbar .pathbar button label {
-	border-bottom-color: @medium_gray;
+	border-bottom-color: @medium_blue;
 }
 
 headerbar .pathbar button.active label {
@@ -918,20 +918,34 @@ treeview header button label {
 	padding-right: 6px;
 }
 
+list,
 treeview,
 view,
-.primary-toolbar .view, /* This is used for LibreOffice toolbar dropdowns in Combobox */
+.view, /* This is used for various LibreOffice backgrounds */
 view text {
 	background-color: @theme_base_color_dark;
 	color: @theme_fg_color_dark;
 }
 
-.view:selected {
+.view:selected,
+row:selected {
 	color: @theme_selected_fg_color_dark;
 }
 
 .view {
 	padding: 0px 3px;
+}
+
+row:selected {
+	background-color: @theme_selected_bg_color_dark;
+}
+
+row label {
+	color: @theme_fg_color_dark;
+}
+
+row:selected label {
+	color: @theme_selected_fg_color_dark;
 }
 
 treemenu menu {
@@ -1365,6 +1379,7 @@ overlay revealer frame {
 	border: 1px solid @theme_border_color_shade_dark;
 	box-shadow: 3px 3px 3px 0px rgba(0, 0, 0, 0.25);
 	color: @theme_selected_fg_color_dark;
+	padding: 6px;
 }
 
 overlay revealer frame border {
@@ -1382,10 +1397,6 @@ frame border /* Firefox borders */ {
 
 popover separator {
 	border-color: rgba(0, 0, 0, 0.25);
-}
-
-frame {
-	padding: 6px;
 }
 
 toolbar separator {
