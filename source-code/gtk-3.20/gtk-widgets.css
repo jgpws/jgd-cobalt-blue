@@ -15,7 +15,8 @@
 	outline-width: 1px;
 }
 
-*:selected {
+*:selected,
+selection {
 	background-color: @theme_selected_bg_color;
 	color: @theme_selected_fg_color;
 }
@@ -1419,6 +1420,7 @@ scrolledwindow.frame {
 	border-radius: 3px;
 }
 
+.floating-bar,
 tooltip.background {
 	background-color: @theme_bg_color;
 	color: @theme_fg_color;
@@ -1428,6 +1430,8 @@ tooltip.background {
 rubberband,
 flowbox rubberband,
 treeview.view rubberband,
+.view rubberband,
+.view .rubberband,
 .content-view rubberband,
 .rubberband {
 	border: 1px solid @rubberband_border_color;
