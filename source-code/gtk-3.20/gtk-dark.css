@@ -8,7 +8,7 @@
 /* Overall styles */
 * {
 	background-clip: padding-box;
-	font-family: "DejaVu Sans", sans-serif;
+	font-family: "DejaVu Sans Condensed", sans-serif;
 	font-stretch: condensed;
 	-GtkIMHtml-hyperlink-color: @theme_link_color_dark;
 	-GtkHTML-link-color: @theme_link_color_dark;
@@ -82,6 +82,7 @@ combobox entry {
 }
 
 button,
+button.flat:hover,
 spinbutton,
 entry,
 textview,
@@ -123,6 +124,7 @@ textview /* Textview styles Firefox's address, search and address dropdown */ {
 }
 
 button,
+button.flat:hover,
 menubar > menuitem:active,
 menuitem:hover,
 placessidebar row:selected,
@@ -159,7 +161,8 @@ button.flat {
 }
 
 button:checked,
-button:hover {
+button:hover,
+button.flat:hover {
 	background-color: mix (@theme_base_color_dark, @theme_fg_color_dark, 0.25);
 }
 
@@ -196,6 +199,12 @@ entry:disabled {
 button.image-button:disabled,
 button.popup:disabled image {
 	-gtk-icon-effect: dim;
+	background-image: none;
+}
+
+button.flat {
+	border: 1px solid transparent;
+	background-color: transparent;
 	background-image: none;
 }
 
@@ -358,6 +367,11 @@ dialog headerbar button label {
 	font-weight: normal;
 }
 
+headerbar button.flat,
+headerbar button.flat label {
+	color: @theme_fg_color_dark;
+}
+
 headerbar stackswitcher button {
 	background-color: @headerbar_stackswitcher_button_bg;
 	margin: 0 3px 0 3px;
@@ -373,14 +387,11 @@ headerbar dialog button {
 }
 
 toolbar button {
-	border: 1px solid transparent;
-	background-color: transparent;
-	background-image: none;
 	margin: 2px;
 	padding: 3px 6px;
 }
 
-toolbar button:hover,
+/*toolbar button:hover,
 toolbar button:checked {
 	border: 1px solid @theme_border_color_dark;
 	background-image: linear-gradient(to bottom,
@@ -388,7 +399,7 @@ toolbar button:checked {
 		rgba(0, 32, 194, 0) 49%,
 		rgba(0, 32, 194, 0.15) 50%,
 		rgba(0, 32, 194, 0) 100%);
-}
+}*/
 
 /* Path bar inside window- denoted by class .path-bar */
 .path-bar button {
@@ -540,7 +551,7 @@ headerbar {
 
 headerbar label {
 	color: @white;
-	font-family: "DejaVu Sans", sans-serif;
+	font-family: "DejaVu Sans Condensed", sans-serif;
 	font-stretch: condensed;
 	font-weight: bold;
 }
@@ -1344,7 +1355,7 @@ dialog.background {
 }
 
 dialog headerbar label {
-	font-family: "DejaVu Sans", sans-serif;
+	font-family: "DejaVu Sans Condensed", sans-serif;
 	font-stretch: condensed;
 	font-weight: bold;
 }
@@ -1429,6 +1440,7 @@ scrolledwindow.frame {
 	border-radius: 3px;
 }
 
+.floating-bar,
 tooltip.background {
 	background-color: @theme_bg_color_dark;
 	color: @theme_fg_color_dark;
@@ -1438,10 +1450,12 @@ tooltip.background {
 rubberband,
 flowbox rubberband,
 treeview.view rubberband,
+.view rubberband,
+.view .rubberband,
 .content-view rubberband,
 .rubberband {
 	border: 1px solid rgba(0, 0, 0, 0.25);
-	background-color: rgba(128, 128, 128, 0.5);
+	background-color: @rubberband_bg_color;
 }
 
 /* Widget Assets */
