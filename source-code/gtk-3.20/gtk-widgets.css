@@ -118,7 +118,12 @@ calendar.view {
 
 entry,
 combobox entry,
-textview /* Textview styles Firefox's address, search and address dropdown */ {
+textview, /* Textview styles Firefox's address, search and address dropdown */
+treeview,
+view,
+.view, /* This is used for various LibreOffice backgrounds */
+view text,
+.view text /* Gajim */ {
 	background-color: @theme_base_color;
 	color: @theme_fg_color;
 }
@@ -896,14 +901,8 @@ treeview header button label {
 
 paned .view {
 	background-color: transparent;
-}
-
-treeview,
-view,
-.view, /* This is used for various LibreOffice backgrounds */
-view text {
-	background-color: @theme_base_color;
-	color: @theme_fg_color;
+	padding: 0;
+	border: 0;
 }
 
 row:backdrop label {
